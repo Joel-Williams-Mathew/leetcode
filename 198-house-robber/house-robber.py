@@ -9,6 +9,6 @@ class Solution:
             skipCurrent = helper(i+1)
             dp[i] = max(robCurrent, skipCurrent)
             return dp[i]
-        dp = [-1] * (len(nums) + 1)
+        dp = [-1] * (len(nums))
         return helper(0)      
 
