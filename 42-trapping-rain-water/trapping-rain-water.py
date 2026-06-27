@@ -6,7 +6,7 @@ class Solution:
         leftMax = 0
         rightMax = 0
 
-        water = 0
+        output = 0
 
         while left < right:
 
@@ -15,7 +15,7 @@ class Solution:
                 if height[left] >= leftMax:
                     leftMax = height[left]
                 else:
-                    water += leftMax - height[left]
+                    output += leftMax - height[left]
 
                 left += 1
 
@@ -24,8 +24,8 @@ class Solution:
                 if height[right] >= rightMax:
                     rightMax = height[right]
                 else:
-                    water += rightMax - height[right]
+                    output += rightMax - height[right]
 
                 right -= 1
 
-        return water
+        return output
